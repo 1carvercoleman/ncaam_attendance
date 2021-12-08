@@ -28,7 +28,7 @@ keep if population==flag
 drop flag
 save ncaam_city_to_county.dta, replace
 
-use "3. COVID Cases.dta", clear
+import delimited "us-counties.csv", clear
 replace date = subinstr(date, "-", "",.)
 save ncaam_covid_cases.dta
 
