@@ -1,83 +1,86 @@
 *Build full attendance dataset
 *Author: Carver Coleman
 
+*Change directory to data
+cd "ENTER PATH TO DATA"
+
 *Read in all datasets
-import delimited C:\Users\carverjc\Box\data\ncaam_school_to_county\ncaam_extra_county_states.csv, clear
-save C:\Users\carverjc\Box\data\ncaam_school_to_county\ncaam_extra_county_states, replace
+import delimited ncaam_extra_county_states.csv, clear
+save ncaam_extra_county_states, replace
 
-import delimited C:\Users\carverjc\Box\data\ncaam_school_to_county\MTeamSpellings.csv, clear
+import delimited MTeamSpellings.csv, clear
 rename teamid TeamID
-save C:\Users\carverjc\Box\data\ncaam_school_to_county\MTeamSpellings, replace
+save MTeamSpellings, replace
 
-import delimited C:\Users\carverjc\Box\data\ncaam_school_to_county\Cities.csv, clear
+import delimited Cities.csv, clear
 rename cityid CityID
-save C:\Users\carverjc\Box\data\ncaam_school_to_county\Cities
+save Cities
 
-import delimited C:\Users\carverjc\Box\data\ncaam_school_to_county\MTeams.csv, clear
+import delimited MTeams.csv, clear
 rename teamid TeamID
-save C:\Users\carverjc\Box\data\ncaam_school_to_county\MTeams
+save MTeams
 
-import delimited "C:\Users\carverjc\Box\data\ncaam_school_to_county\ncaam_city_to_county.csv", clear
+import delimited ncaam_city_to_county.csv, clear
 rename state_id home_team_state
 rename city home_team_city
 bysort home_team_city home_team_state: egen flag=max(population)
 keep if population==flag
 drop flag
-save "C:\Users\carverjc\Box\data\ncaam_school_to_county\ncaam_city_to_county.dta", replace
+save ncaam_city_to_county.dta, replace
 
-use "C:\Users\carverjc\Box\data\3. COVID Cases.dta"
+use "3. COVID Cases.dta", clear
 replace date = subinstr(date, "-", "",.)
-save "C:\Users\carverjc\Box\data\ncaam_covid_cases.dta"
+save ncaam_covid_cases.dta
 
 *This will clean trank
-import delimited "C:\Users\carverjc\Box\data\ncaam_trank_17.csv", clear
+import delimited ncaam_trank_17.csv, clear
 keep trank team_name
 drop if mi(trank)
 replace team_name = lower(team_name)
 rename team_name teamnamespelling
-merge m:1 teamnamespelling using C:\Users\carverjc\Box\data\ncaam_school_to_county\MTeamSpellings
+merge m:1 teamnamespelling using MTeamSpellings
 drop if _merge != 3
 gen year = 2017
 drop teamnamespelling _merge
-save "C:\Users\carverjc\Box\data\ncaam_trank_17.dta", replace
+save ncaam_trank_17.dta, replace
 
 * 2018
-import delimited "C:\Users\carverjc\Box\data\ncaam_trank_18.csv", clear
+import delimited ncaam_trank_18.csv, clear
 keep trank team_name
 drop if mi(trank)
 replace team_name = lower(team_name)
 rename team_name teamnamespelling
-merge m:1 teamnamespelling using C:\Users\carverjc\Box\data\ncaam_school_to_county\MTeamSpellings
+merge m:1 teamnamespelling using MTeamSpellings
 drop if _merge != 3
 gen year = 2018
 drop teamnamespelling _merge
-save "C:\Users\carverjc\Box\data\ncaam_trank_18.dta", replace
+save ncaam_trank_18.dta, replace
 
 *2019
-import delimited "C:\Users\carverjc\Box\data\ncaam_trank_19.csv", clear
+import delimited ncaam_trank_19.csv, clear
 keep trank team_name
 drop if mi(trank)
 replace team_name = lower(team_name)
 rename team_name teamnamespelling
-merge m:1 teamnamespelling using C:\Users\carverjc\Box\data\ncaam_school_to_county\MTeamSpellings
+merge m:1 teamnamespelling using MTeamSpellings
 drop if _merge != 3
 gen year = 2019
 drop teamnamespelling _merge
-save "C:\Users\carverjc\Box\data\ncaam_trank_19.dta", replace
+save ncaam_trank_19.dta, replace
 
 *2020
-import delimited "C:\Users\carverjc\Box\data\ncaam_trank_20.csv", clear
+import delimited ncaam_trank_20.csv, clear
 keep trank team_name
 drop if mi(trank)
 replace team_name = lower(team_name)
 rename team_name teamnamespelling
-merge m:1 teamnamespelling using C:\Users\carverjc\Box\data\ncaam_school_to_county\MTeamSpellings
+merge m:1 teamnamespelling using MTeamSpellings
 drop if _merge != 3
 gen year = 2020
 drop teamnamespelling _merge
-save "C:\Users\carverjc\Box\data\ncaam_trank_20.dta", replace
+save ncaam_trank_20.dta, replace
 
-import delimited C:\Users\carverjc\Box\data\ncaam_school_to_county\MGameCities.csv, clear
+import delimited MGameCities.csv, clear
 drop if season != 2020
 gen counter = 1
 collapse (sum) counter, by(wteamid cityid)
@@ -85,8 +88,8 @@ bysort wteamid: egen flag=max(counter)
 keep if counter==flag
 drop flag
 rename wteamid TeamID
-save C:\Users\carverjc\Box\data\ncaam_school_to_county\w_team_city_crosswalk, replace
-import delimited C:\Users\carverjc\Box\data\ncaam_school_to_county\MGameCities.csv, clear
+save w_team_city_crosswalk, replace
+import delimited MGameCities.csv, clear
 drop if season != 2020
 gen counter = 1
 collapse (sum) counter, by(lteamid cityid)
@@ -94,8 +97,8 @@ bysort lteamid: egen flag=max(counter)
 keep if counter==flag
 drop flag
 rename lteamid TeamID
-save C:\Users\carverjc\Box\data\ncaam_school_to_county\l_team_city_crosswalk, replace
-append using C:\Users\carverjc\Box\data\ncaam_school_to_county\w_team_city_crosswalk
+save l_team_city_crosswalk, replace
+append using w_team_city_crosswalk
 sort TeamID cityid
 quietly by TeamID cityid: gen dup = cond(_N==1,0,_n)
 drop if dup > 1
@@ -103,27 +106,27 @@ bysort TeamID: egen flag=max(counter)
 keep if counter==flag
 drop dup flag
 rename cityid CityID
-merge m:1 CityID using C:\Users\carverjc\Box\data\ncaam_school_to_county\Cities
+merge m:1 CityID using Cities
 drop if _merge == 2
 drop _merge
-merge m:1 TeamID using C:\Users\carverjc\Box\data\ncaam_school_to_county\MTeams
+merge m:1 TeamID using MTeams
 drop if _merge == 2
 drop _merge
 * I'll now manually go through and choose the cities that best match the teams
 sort TeamID
 quietly by TeamID: gen dup = cond(_N==1,0,_n)
 sort TeamID dup
-export delimited C:\Users\carverjc\Box\data\ncaam_school_to_county\create_team_crosswalk.csv
+* export delimited create_team_crosswalk.csv
 * Now read it in
-import delimited C:\Users\carverjc\Box\data\ncaam_school_to_county\create_team_crosswalk.csv, clear
+import delimited create_team_crosswalk.csv, clear
 drop counter firstd1season lastd1season dup
 rename teamname team_name
 rename teamid TeamID
-save C:\Users\carverjc\Box\data\ncaam_school_to_county\team_to_city_crosswalk, replace
+save team_to_city_crosswalk, replace
 
 
 * Read in data
-import delimited C:\Users\carverjc\Box\data\ncaam_final_data_17.csv, clear
+import delimited ncaam_final_data_17.csv, clear
 gen year = 2017
 * I'm merging team spellings
 gen away_team_name = substr(away_team, 1, strrpos(away_team, " ") - 1)
@@ -133,16 +136,16 @@ rename away_team_name teamnamespelling
 replace teamnamespelling = lower(teamnamespelling)
 replace teamnamespelling = "miami (fl)" if teamnamespelling == "miami"
 replace teamnamespelling = "san jose state" if teamnamespelling == "san josé state"
-merge m:1 teamnamespelling using C:\Users\carverjc\Box\data\ncaam_school_to_county\MTeamSpellings
+merge m:1 teamnamespelling using MTeamSpellings
 * This will drop quite a few, but looking at them none of them are significant schools
 drop if _merge != 3
 drop _merge
 * Now merge ranks
-merge m:1 year TeamID using "C:\Users\carverjc\Box\data\ncaam_trank_17.dta"
+merge m:1 year TeamID using ncaam_trank_17.dta
 drop if _merge == 2
 drop _merge
 drop if mi(trank)
-merge m:1 TeamID using C:\Users\carverjc\Box\data\ncaam_school_to_county\team_to_city_crosswalk
+merge m:1 TeamID using team_to_city_crosswalk
 drop if _merge == 2
 rename teamnamespelling away_team_name
 rename TeamID away_team_id
@@ -156,15 +159,15 @@ rename home_team_name teamnamespelling
 replace teamnamespelling = lower(teamnamespelling)
 replace teamnamespelling = "miami (fl)" if teamnamespelling == "miami"
 replace teamnamespelling = "san jose state" if teamnamespelling == "san josé state"
-merge m:1 teamnamespelling using C:\Users\carverjc\Box\data\ncaam_school_to_county\MTeamSpellings
+merge m:1 teamnamespelling using MTeamSpellings
 drop if _merge != 3
 drop _merge
 * Now merge ranks
-merge m:1 year TeamID using "C:\Users\carverjc\Box\data\ncaam_trank_17.dta"
+merge m:1 year TeamID using ncaam_trank_17.dta
 drop if _merge == 2
 drop _merge
 drop if mi(trank)
-merge m:1 TeamID using C:\Users\carverjc\Box\data\ncaam_school_to_county\team_to_city_crosswalk
+merge m:1 TeamID using team_to_city_crosswalk
 drop if _merge == 2
 rename teamnamespelling home_team_name
 rename TeamID home_team_id
@@ -173,10 +176,10 @@ rename city home_team_city
 rename state home_team_state
 rename trank home_trank
 drop team_name _merge
-save "C:\Users\carverjc\Box\data\ncaam_final_data_17.dta", replace
+save ncaam_final_data_17.dta, replace
 
 
-import delimited C:\Users\carverjc\Box\data\ncaam_final_data_18.csv, clear
+import delimited ncaam_final_data_18.csv, clear
 gen year = 2018
 * I'm merging team spellings
 gen away_team_name = substr(away_team, 1, strrpos(away_team, " ") - 1)
@@ -186,16 +189,16 @@ rename away_team_name teamnamespelling
 replace teamnamespelling = lower(teamnamespelling)
 replace teamnamespelling = "miami (fl)" if teamnamespelling == "miami"
 replace teamnamespelling = "san jose state" if teamnamespelling == "san josé state"
-merge m:1 teamnamespelling using C:\Users\carverjc\Box\data\ncaam_school_to_county\MTeamSpellings
+merge m:1 teamnamespelling using MTeamSpellings
 * This will drop quite a few, but looking at them none of them are significant schools
 drop if _merge != 3
 drop _merge
 * Now merge ranks
-merge m:1 year TeamID using "C:\Users\carverjc\Box\data\ncaam_trank_18.dta"
+merge m:1 year TeamID using ncaam_trank_18.dta
 drop if _merge == 2
 drop _merge
 drop if mi(trank)
-merge m:1 TeamID using C:\Users\carverjc\Box\data\ncaam_school_to_county\team_to_city_crosswalk
+merge m:1 TeamID using team_to_city_crosswalk
 drop if _merge == 2
 rename teamnamespelling away_team_name
 rename TeamID away_team_id
@@ -209,15 +212,15 @@ rename home_team_name teamnamespelling
 replace teamnamespelling = lower(teamnamespelling)
 replace teamnamespelling = "miami (fl)" if teamnamespelling == "miami"
 replace teamnamespelling = "san jose state" if teamnamespelling == "san josé state"
-merge m:1 teamnamespelling using C:\Users\carverjc\Box\data\ncaam_school_to_county\MTeamSpellings
+merge m:1 teamnamespelling using MTeamSpellings
 drop if _merge != 3
 drop _merge
 * Now merge ranks
-merge m:1 year TeamID using "C:\Users\carverjc\Box\data\ncaam_trank_18.dta"
+merge m:1 year TeamID using ncaam_trank_18.dta
 drop if _merge == 2
 drop _merge
 drop if mi(trank)
-merge m:1 TeamID using C:\Users\carverjc\Box\data\ncaam_school_to_county\team_to_city_crosswalk
+merge m:1 TeamID using team_to_city_crosswalk
 drop if _merge == 2
 rename teamnamespelling home_team_name
 rename TeamID home_team_id
@@ -226,10 +229,10 @@ rename city home_team_city
 rename state home_team_state
 rename trank home_trank
 drop team_name _merge
-save "C:\Users\carverjc\Box\data\ncaam_final_data_18.dta", replace
+save ncaam_final_data_18.dta, replace
 
 
-import delimited C:\Users\carverjc\Box\data\ncaam_final_data_19.csv, clear
+import delimited ncaam_final_data_19.csv, clear
 gen year = 2019
 * I'm merging team spellings
 gen away_team_name = substr(away_team, 1, strrpos(away_team, " ") - 1)
@@ -239,16 +242,16 @@ rename away_team_name teamnamespelling
 replace teamnamespelling = lower(teamnamespelling)
 replace teamnamespelling = "miami (fl)" if teamnamespelling == "miami"
 replace teamnamespelling = "san jose state" if teamnamespelling == "san josé state"
-merge m:1 teamnamespelling using C:\Users\carverjc\Box\data\ncaam_school_to_county\MTeamSpellings
+merge m:1 teamnamespelling using MTeamSpellings
 * This will drop quite a few, but looking at them none of them are significant schools
 drop if _merge != 3
 drop _merge
 * Now merge ranks
-merge m:1 year TeamID using "C:\Users\carverjc\Box\data\ncaam_trank_19.dta"
+merge m:1 year TeamID using "ncaam_trank_19.dta"
 drop if _merge == 2
 drop _merge
 drop if mi(trank)
-merge m:1 TeamID using C:\Users\carverjc\Box\data\ncaam_school_to_county\team_to_city_crosswalk
+merge m:1 TeamID using team_to_city_crosswalk
 drop if _merge == 2
 rename teamnamespelling away_team_name
 rename TeamID away_team_id
@@ -262,15 +265,15 @@ rename home_team_name teamnamespelling
 replace teamnamespelling = lower(teamnamespelling)
 replace teamnamespelling = "miami (fl)" if teamnamespelling == "miami"
 replace teamnamespelling = "san jose state" if teamnamespelling == "san josé state"
-merge m:1 teamnamespelling using C:\Users\carverjc\Box\data\ncaam_school_to_county\MTeamSpellings
+merge m:1 teamnamespelling using MTeamSpellings
 drop if _merge != 3
 drop _merge
 * Now merge ranks
-merge m:1 year TeamID using "C:\Users\carverjc\Box\data\ncaam_trank_19.dta"
+merge m:1 year TeamID using "ncaam_trank_19.dta"
 drop if _merge == 2
 drop _merge
 drop if mi(trank)
-merge m:1 TeamID using C:\Users\carverjc\Box\data\ncaam_school_to_county\team_to_city_crosswalk
+merge m:1 TeamID using team_to_city_crosswalk
 drop if _merge == 2
 rename teamnamespelling home_team_name
 rename TeamID home_team_id
@@ -279,10 +282,10 @@ rename city home_team_city
 rename state home_team_state
 rename trank home_trank
 drop team_name _merge
-save "C:\Users\carverjc\Box\data\ncaam_final_data_19.dta", replace
+save "ncaam_final_data_19.dta", replace
 
 
-import delimited C:\Users\carverjc\Box\data\ncaam_final_data_20.csv, clear
+import delimited ncaam_final_data_20.csv, clear
 gen year = 2020
 * I'm merging team spellings
 gen away_team_name = substr(away_team, 1, strrpos(away_team, " ") - 1)
@@ -292,16 +295,16 @@ rename away_team_name teamnamespelling
 replace teamnamespelling = lower(teamnamespelling)
 replace teamnamespelling = "miami (fl)" if teamnamespelling == "miami"
 replace teamnamespelling = "san jose state" if teamnamespelling == "san josé state"
-merge m:1 teamnamespelling using C:\Users\carverjc\Box\data\ncaam_school_to_county\MTeamSpellings
+merge m:1 teamnamespelling using MTeamSpellings
 * This will drop quite a few, but looking at them none of them are significant schools
 drop if _merge != 3
 drop _merge
 * Now merge ranks
-merge m:1 year TeamID using "C:\Users\carverjc\Box\data\ncaam_trank_20.dta"
+merge m:1 year TeamID using "ncaam_trank_20.dta"
 drop if _merge == 2
 drop _merge
 drop if mi(trank)
-merge m:1 TeamID using C:\Users\carverjc\Box\data\ncaam_school_to_county\team_to_city_crosswalk
+merge m:1 TeamID using team_to_city_crosswalk
 drop if _merge == 2
 rename teamnamespelling away_team_name
 rename TeamID away_team_id
@@ -315,15 +318,15 @@ rename home_team_name teamnamespelling
 replace teamnamespelling = lower(teamnamespelling)
 replace teamnamespelling = "miami (fl)" if teamnamespelling == "miami"
 replace teamnamespelling = "san jose state" if teamnamespelling == "san josé state"
-merge m:1 teamnamespelling using C:\Users\carverjc\Box\data\ncaam_school_to_county\MTeamSpellings
+merge m:1 teamnamespelling using MTeamSpellings
 drop if _merge != 3
 drop _merge
 * Now merge ranks
-merge m:1 year TeamID using "C:\Users\carverjc\Box\data\ncaam_trank_20.dta"
+merge m:1 year TeamID using "ncaam_trank_20.dta"
 drop if _merge == 2
 drop _merge
 drop if mi(trank)
-merge m:1 TeamID using C:\Users\carverjc\Box\data\ncaam_school_to_county\team_to_city_crosswalk
+merge m:1 TeamID using Cteam_to_city_crosswalk
 drop if _merge == 2
 rename teamnamespelling home_team_name
 rename TeamID home_team_id
@@ -332,17 +335,17 @@ rename city home_team_city
 rename state home_team_state
 rename trank home_trank
 drop team_name _merge
-save "C:\Users\carverjc\Box\data\ncaam_final_data_20.dta", replace
+save "ncaam_final_data_20.dta", replace
 
 
-use "C:\Users\carverjc\Box\data\ncaam_final_data_17.dta", clear
+use "ncaam_final_data_17.dta", clear
 *Append all of them here
-append using "C:\Users\carverjc\Box\data\ncaam_final_data_18.dta"
-append using "C:\Users\carverjc\Box\data\ncaam_final_data_19.dta"
-append using "C:\Users\carverjc\Box\data\ncaam_final_data_20.dta"
+append using "ncaam_final_data_18.dta"
+append using "ncaam_final_data_19.dta"
+append using "ncaam_final_data_20.dta"
 
 
-merge m:1 home_team_city home_team_state using "C:\Users\carverjc\Box\data\ncaam_school_to_county\ncaam_city_to_county.dta"
+merge m:1 home_team_city home_team_state using "ncaam_city_to_county.dta"
 drop if _merge == 2
 drop _merge
 rename county_name county
@@ -393,7 +396,7 @@ replace state = "Connecticut" if home_team_name == "uconn"
 
 gen trank_diff = away_trank - home_trank
 
-merge m:1 date county state using "C:\Users\carverjc\Box\data\ncaam_covid_cases.dta"
+merge m:1 date county state using "ncaam_covid_cases.dta"
 drop if _merge == 2
 drop _merge
 
@@ -416,7 +419,7 @@ destring loser_score, replace
 gen point_diff = winner_score - loser_score if home_wins == 1
 replace point_diff = loser_score - winner_score if home_wins == 0
 
-save "C:\Users\carverjc\Box\data\ncaam_analysis_data.dta", replace
+save "ncaam_analysis_data.dta", replace
 
 
 
