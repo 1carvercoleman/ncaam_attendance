@@ -12,13 +12,15 @@ CatchupPause <- function(Secs){
   gc()
 }
 
+data_path <- "PUT PATH TO DATA HERE"
+
 ###############################################################################
 ########################### Loop through all years ############################
 ###############################################################################
 years <- c("17", "18", "19", "20")
 
 for (t in 1:length(years)) {
-  days <- read.csv(paste0("C:/Users/carverjc/Box/data/ncaam_dates_", years[t], ".csv"), header = FALSE)[,1]
+  days <- read.csv(paste0(data_path, years[t], ".csv"), header = FALSE)[,1]
   days <- str_remove(days, "-")
   days <- str_remove(days, "-")
   
@@ -278,6 +280,6 @@ for (t in 1:length(years)) {
   }
   
   
-  write.csv(final_data, paste0("C:/Users/carverjc/Box/data/ncaam_final_data_include_neutral_", years[t], ".csv"), row.names = FALSE)
+  write.csv(final_data, paste0(data_path, years[t], ".csv"), row.names = FALSE)
   
 }
