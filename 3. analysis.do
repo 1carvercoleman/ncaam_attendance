@@ -1,4 +1,8 @@
-use "C:\Users\carverjc\Box\data\ncaam_analysis_data.dta", clear
+
+* Change directory to data
+cd "PUT DATA PATH HERE"
+
+use "ncaam_analysis_data.dta", clear
 
 *Adjust scaling of attendance so it is increase in 10%
 
@@ -80,14 +84,14 @@ restore
 
 
 * Do 2 week cases per population
-use "C:\Users\carverjc\Box\data\ncaam_analysis_data.dta", clear
+use "ncaam_analysis_data.dta", clear
 destring people, replace ignore(",")
 destring attendance, replace ignore("NA")
 replace people = people / 1000
 replace attendance = attendance * 0.05
 *replace attendance = attendance * 0.1
 replace trank_diff = trank_diff / 100
-merge m:1 county state using "C:\Users\carverjc\Box\data\ncaam_covid_cases_week.dta"
+merge m:1 county state using "ncaam_covid_cases_week.dta"
 drop if _merge == 2
 drop _merge
 drop if year != 2020
