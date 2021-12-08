@@ -9,4 +9,4 @@ This dataset contains percent attendance for most games in the NCAAM 2020-21 sea
 # Steps to build and analyze data
 The build occurs in two steps:
 1. Run "1. get_ncaam_data.R" to scrape the ESPN website.
-2. Run the STATA do file "2. full_build.do" to compile the game data with other datasets. You must download the "us-counties.csv" from the NYT github repo and place it in data.
+2. Run the STATA do file "2. full_build.do" to compile the game data with other datasets. You must download the "us-counties.csv" from the NYT github repo and copy it into the data folder.
