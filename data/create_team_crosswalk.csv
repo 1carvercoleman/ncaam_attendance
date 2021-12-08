@@ -1,0 +1,354 @@
+TeamID,CityID,counter,city,state,teamname,firstd1season,lastd1season,dup
+1101,4001,3,Abilene,TX,Abilene Chr,2014,2021,0
+1102,4356,7,USAF Academy,CO,Air Force,1985,2021,0
+1103,4002,13,Akron,OH,Akron,1985,2021,0
+1104,4353,5,Tuscaloosa,AL,Alabama,1985,2021,0
+1105,4159,6,Huntsville,AL,Alabama A&M,2000,2021,0
+1106,4220,5,Montgomery,AL,Alabama St,1985,2021,0
+1107,4003,6,Albany,NY,SUNY Albany,2000,2021,0
+1108,4200,2,Lorman,MS,Alcorn St,1985,2021,1
+1110,4363,11,Washington,DC,American Univ,1985,2021,0
+1111,4036,5,Boone,NC,Appalachian St,1985,2021,0
+1112,4350,4,Tucson,AZ,Arizona,1985,2021,0
+1113,4343,13,Tempe,AZ,Arizona St,1985,2021,0
+1114,4196,2,Little Rock,AR,Ark Little Rock,1985,2021,0
+1115,4268,8,Pine Bluff,AR,Ark Pine Bluff,1999,2021,0
+1116,4119,9,Fayetteville,AR,Arkansas,1985,2021,0
+1117,4172,7,Jonesboro,AR,Arkansas St,1985,2021,0
+1119,4367,8,West Point,NY,Army,1985,2021,0
+1120,4018,16,Auburn,AL,Auburn,1985,2021,0
+1122,4073,12,Clarksville,TN,Austin Peay,1985,2021,0
+1123,4227,4,Muncie,IN,Ball St,1985,2021,0
+1124,4362,14,Waco,TX,Baylor,1985,2021,0
+1125,4233,1,Nashville,TN,Belmont,2000,2021,6
+1126,4092,8,Daytona Beach,FL,Bethune-Cookman,1985,2020,0
+1127,4360,5,Vestal,NY,Binghamton,2002,2021,0
+1129,4035,12,Boise,ID,Boise St,1985,2021,0
+1130,4039,8,Boston,MA,Boston College,1985,2021,0
+1131,4039,3,Boston,MA,Boston Univ,1985,2021,0
+1132,4042,2,Bowling Green,OH,Bowling Green,1985,2021,2
+1133,4265,14,Peoria,IL,Bradley,1985,2021,0
+1135,4281,9,Providence,RI,Brown,1985,2020,0
+1136,4317,8,Smithfield,RI,Bryant,2009,2021,0
+1137,4191,9,Lewisburg,PA,Bucknell,1985,2021,0
+1138,4049,9,Buffalo,NY,Buffalo,1992,2021,0
+1139,4161,3,Indianapolis,IN,Butler,1985,2021,0
+1140,4282,1,Provo,UT,BYU,1985,2021,8
+1141,4226,9,Mt. Pleasant,MI,C Michigan,1985,2021,0
+1142,4308,5,San Luis Obispo,CA,Cal Poly,1995,2021,0
+1143,4027,12,Berkeley,CA,California,1985,2021,0
+1144,4050,6,Buies Creek,NC,Campbell,1985,2021,0
+1145,4049,7,Buffalo,NY,Canisius,1985,2021,0
+1146,4081,4,Conway,AR,Cent Arkansas,2007,2021,0
+1148,4235,9,New Britain,CT,Central Conn,1987,2021,0
+1149,4390,6,North Charleston,SC,Charleston So,1985,2021,0
+1150,4066,13,Charlotte,NC,Charlotte,1985,2021,0
+1151,4068,8,Chattanooga,TN,Chattanooga,1985,2021,0
+1152,4071,11,Chicago,IL,Chicago St,1985,2021,0
+1153,4072,13,Cincinnati,OH,Cincinnati,1985,2021,0
+1154,4064,11,Charleston,SC,Citadel,1985,2021,0
+1155,4074,6,Clemson,SC,Clemson,1985,2021,0
+1156,4075,5,Cleveland,OH,Cleveland St,1985,2021,0
+1157,4082,7,Conway,SC,Coastal Car,1987,2021,0
+1158,4064,9,Charleston,SC,Col Charleston,1992,2021,0
+1159,4144,14,Hamilton,NY,Colgate,1985,2021,0
+1160,4040,3,Boulder,CO,Colorado,1985,2021,0
+1161,4121,11,Fort Collins,CO,Colorado St,1985,2021,0
+1162,4239,8,New York,NY,Columbia,1985,2020,0
+1163,4460,8,Mansfield,CT,Connecticut,1985,2021,0
+1164,4022,6,Baltimore,MD,Coppin St,1986,2021,0
+1165,4164,4,Ithaca,NY,Cornell,1985,2020,0
+1166,4255,16,Omaha,NE,Creighton,1985,2021,0
+1167,4021,6,Bakersfield,CA,CS Bakersfield,2008,2021,0
+1168,4127,4,Fullerton,CA,CS Fullerton,1985,2021,0
+1169,4249,4,Northridge,CA,CS Northridge,1991,2021,0
+1170,4300,4,Sacramento,CA,CS Sacramento,1992,2021,0
+1171,4147,6,Hanover,NH,Dartmouth,1985,2020,0
+1172,4089,11,Davidson,NC,Davidson,1985,2021,0
+1173,4091,17,Dayton,OH,Dayton,1985,2021,0
+1174,4240,9,Newark,DE,Delaware,1985,2021,0
+1175,4099,2,Dover,DE,Delaware St,1985,2021,0
+1176,4096,5,Denver,CO,Denver,1999,2021,0
+1177,4071,7,Chicago,IL,DePaul,1985,2021,0
+1178,4098,5,Detroit,MI,Detroit,1985,2021,0
+1179,4097,2,Des Moines,IA,Drake,1985,2021,0
+1180,4266,9,Philadelphia,PA,Drexel,1985,2021,0
+1181,4101,2,Durham,NC,Duke,1985,2021,0
+1182,4270,4,Pittsburgh,PA,Duquesne,1985,2021,0
+1183,4062,9,Charleston,IL,E Illinois,1985,2021,0
+1184,4291,8,Richmond,KY,E Kentucky,1985,2021,0
+1185,4374,4,Ypsilanti,MI,E Michigan,1985,2021,0
+1186,4069,11,Cheney,WA,E Washington,1985,2021,0
+1187,4138,7,Greenville,NC,East Carolina,1985,2021,0
+1188,4107,10,Edwardsville,IL,SIUE,2009,2021,0
+1189,4109,5,Elon,NC,Elon,2000,2021,0
+1190,4170,1,Johnson City,TN,ETSU,1985,2021,3
+1191,4114,4,Evansville,IN,Evansville,1985,2021,0
+1192,4142,5,Hackensack,NJ,F Dickinson,1985,2021,0
+1193,4044,4,Bridgeport,CT,Fairfield,1985,2021,0
+1194,4033,11,Boca Raton,FL,FL Atlantic,1994,2021,0
+1195,4123,4,Fort Myers,FL,FL Gulf Coast,2008,2021,0
+1196,4128,4,Gainesville,FL,Florida,1985,2021,0
+1197,4341,8,Tallahassee,FL,Florida A&M,1985,2021,0
+1198,4214,8,Miami,FL,Florida Intl,1988,2021,0
+1199,4341,16,Tallahassee,FL,Florida St,1985,2021,0
+1200,4045,12,Bronx,NY,Fordham,1985,2021,0
+1201,4126,6,Fresno,CA,Fresno St,1985,2021,0
+1202,4139,11,Greenville,SC,Furman,1985,2021,0
+1203,4363,7,Washington,DC,G Washington,1985,2021,0
+1204,4334,4,Statesboro,GA,Ga Southern,1985,2021,0
+1205,4034,5,Boiling Springs,NC,Gardner Webb,2003,2021,0
+1206,4115,10,Fairfax,VA,George Mason,1985,2021,0
+1207,4363,10,Washington,DC,Georgetown,1985,2021,0
+1208,4014,12,Athens,GA,Georgia,1985,2021,0
+1209,4016,3,Atlanta,GA,Georgia St,1985,2021,0
+1210,4016,9,Atlanta,GA,Georgia Tech,1985,2021,0
+1211,4324,17,Spokane,WA,Gonzaga,1985,2021,0
+1212,4132,2,Grambling,LA,Grambling,1985,2021,2
+1213,4267,8,Phoenix,AZ,Grand Canyon,2014,2021,0
+1214,4146,5,Hampton,VA,Hampton,1996,2021,0
+1216,4364,7,West Hartford,CT,Hartford,1985,2021,0
+1217,4039,2,Boston,MA,Harvard,1985,2020,2
+1218,4155,13,Honolulu,HI,Hawaii,1985,2021,0
+1219,4152,9,High Point,NC,High Point,2000,2021,0
+1220,4151,9,Hempstead,NY,Hofstra,1985,2021,0
+1221,4372,11,Worcester,MA,Holy Cross,1985,2021,0
+1222,4157,15,Houston,TX,Houston,1985,2021,0
+1223,4157,11,Houston,TX,Houston Bap,1985,2021,0
+1224,4363,1,Washington,DC,Howard,1985,2021,1
+1225,4225,10,Moscow,ID,Idaho,1985,2021,0
+1226,4272,9,Pocatello,ID,Idaho St,1985,2021,0
+1227,4071,8,Chicago,IL,IL Chicago,1985,2021,0
+1228,4060,14,Champaign,IL,Illinois,1985,2021,0
+1229,4246,6,Normal,IL,Illinois St,1985,2021,0
+1230,4302,4,San Antonio,TX,Incarnate Word,2014,2021,0
+1231,4032,4,Bloomington,IN,Indiana,1985,2021,0
+1232,4344,11,Terre Haute,IN,Indiana St,1985,2021,0
+1233,4238,5,New Rochelle,NY,Iona,1985,2021,0
+1234,4162,2,Iowa City,IA,Iowa,1985,2021,0
+1235,4006,11,Ames,IA,Iowa St,1985,2021,0
+1236,4124,7,Fort Wayne,IN,PFW,2003,2021,0
+1237,4161,10,Indianapolis,IN,IUPUI,1999,2021,0
+1238,4166,7,Jackson,MS,Jackson St,1985,2021,0
+1239,4168,9,Jacksonville,FL,Jacksonville,1985,2021,0
+1240,4167,6,Jacksonville,AL,Jacksonville St,1996,2021,0
+1241,4148,9,Harrisonburg,VA,James Madison,1985,2021,0
+1242,4189,1,Lawrence,KS,Kansas,1985,2021,3
+1243,4211,9,Manhattan,KS,Kansas St,1985,2021,0
+1244,4176,10,Kennesaw,GA,Kennesaw,2006,2021,0
+1245,4177,12,Kent,OH,Kent,1985,2021,0
+1246,4193,2,Lexington,KY,Kentucky,1985,2021,1
+1247,4266,8,Philadelphia,PA,La Salle,1985,2021,0
+1248,4105,8,Easton,PA,Lafayette,1985,2021,0
+1249,4026,5,Beaumont,TX,Lamar,1985,2021,0
+1250,4028,6,Bethlehem,PA,Lehigh,1985,2021,0
+1251,4206,15,Lynchburg,VA,Liberty,1989,2021,0
+1252,4233,7,Nashville,TN,Lipscomb,2003,2021,0
+1253,4198,6,Long Beach,CA,Long Beach St,1985,2021,0
+1254,4047,6,Brooklyn,NY,LIU Brooklyn,1985,2021,0
+1255,4118,6,Farmville,VA,Longwood,2005,2021,0
+1256,4299,13,Ruston,LA,Louisiana Tech,1985,2021,0
+1258,4201,6,Los Angeles,CA,Loy Marymount,1985,2021,0
+1259,4022,4,Baltimore,MD,Loyola MD,1985,2021,0
+1260,4071,2,Chicago,IL,Loyola-Chicago,1985,2021,2
+1261,4024,2,Baton Rouge,LA,LSU,1985,2021,0
+1262,4204,9,Lowell,MA,MA Lowell,2014,2021,0
+1263,4259,4,Orono,ME,Maine,1985,2021,1
+1264,4045,8,Bronx,NY,Manhattan,1985,2021,0
+1265,4275,10,Poughkeepsie,NY,Marist,1985,2021,0
+1266,4215,3,Milwaukee,WI,Marquette,1985,2021,0
+1267,4158,6,Huntington,WV,Marshall,1985,2021,0
+1268,4077,1,College Park,MD,Maryland,1985,2021,5
+1269,4007,11,Amherst,MA,Massachusetts,1985,2021,0
+1270,4184,6,Lake Charles,LA,McNeese St,1985,2021,0
+1271,4279,3,Princess Anne,MD,MD E Shore,1985,2020,0
+1272,4213,15,Memphis,TN,Memphis,1985,2021,0
+1273,4208,7,Macon,GA,Mercer,1985,2021,0
+1274,4084,9,Coral Gables,FL,Miami FL,1986,2021,0
+1275,4261,8,Oxford,OH,Miami OH,1985,2021,0
+1276,4010,11,Ann Arbor,MI,Michigan,1985,2021,0
+1277,4103,3,East Lansing,MI,Michigan St,1985,2021,0
+1278,4216,5,Minneapolis,MN,Minnesota,1985,2021,0
+1279,4260,13,Oxford,MS,Mississippi,1985,2021,0
+1280,4332,2,Starkville,MS,Mississippi St,1985,2021,0
+1281,4463,4,Columbia,MO,Missouri,1985,2021,0
+1282,4174,6,Kansas City,MO,Missouri KC,1990,2021,0
+1283,4327,11,Springfield,MO,Missouri St,1985,2021,0
+1284,4366,2,West Long Branch,NJ,Monmouth NJ,1985,2021,0
+1285,4217,2,Missoula,MT,Montana,1985,2021,0
+1286,4043,7,Bozeman,MT,Montana St,1985,2021,0
+1287,4223,4,Morehead,KY,Morehead St,1985,2021,0
+1288,4022,6,Baltimore,MD,Morgan St,1985,2021,0
+1290,4165,1,Itta Bena,MS,MS Valley St,1985,2021,2
+1291,4110,6,Emmitsburg,MD,Mt St Mary's,1989,2021,0
+1292,4228,2,Murfreesboro,TN,MTSU,1985,2021,0
+1293,4229,13,Murray,KY,Murray St,1985,2021,0
+1294,4134,3,Greeley,CO,N Colorado,2005,2021,0
+1295,4117,11,Fargo,ND,N Dakota St,2006,2021,0
+1296,4093,4,DeKalb,IL,N Illinois,1985,2021,0
+1297,4153,4,Highland Heights,KY,N Kentucky,2013,2021,0
+1298,4011,5,Annapolis,MD,Navy,1985,2021,0
+1299,4136,10,Greensboro,NC,NC A&T,1985,2021,0
+1300,4101,9,Durham,NC,NC Central,2008,2021,0
+1301,4287,14,Raleigh,NC,NC State,1985,2021,0
+1303,4255,2,Omaha,NE,NE Omaha,2012,2021,0
+1304,4195,11,Lincoln,NE,Nebraska,1985,2021,0
+1305,4290,3,Reno,NV,Nevada,1985,2021,0
+1306,4102,8,Durham,NH,New Hampshire,1985,2021,0
+1307,4004,14,Albuquerque,NM,New Mexico,1985,2021,0
+1308,4187,11,Las Cruces,NM,New Mexico St,1985,2021,0
+1309,4237,8,New Orleans,LA,New Orleans,1985,2021,0
+1310,4192,9,Lewiston,NY,Niagara,1985,2021,0
+1311,4345,9,Thibodaux,LA,Nicholls St,1985,2021,0
+1312,4241,7,Newark,NJ,NJIT,2007,2021,0
+1313,4244,8,Norfolk,VA,Norfolk St,1998,2021,0
+1314,4061,8,Chapel Hill,NC,North Carolina,1985,2021,0
+1315,4133,3,Grand Forks,ND,North Dakota,2009,2021,0
+1316,4168,2,Jacksonville,FL,North Florida,2006,2021,0
+1317,4095,11,Denton,TX,North Texas,1985,2021,0
+1318,4039,6,Boston,MA,Northeastern,1985,2021,0
+1319,4120,5,Flagstaff,AZ,Northern Arizona,1985,2021,0
+1320,4058,14,Cedar Falls,IA,Northern Iowa,1985,2021,0
+1321,4113,5,Evanston,IL,Northwestern,1985,2021,0
+1322,4234,5,Natchitoches,LA,Northwestern LA,1985,2021,0
+1323,4250,15,Notre Dame,IN,Notre Dame,1985,2021,0
+1324,4295,7,Rochester,MI,Oakland,2000,2021,0
+1325,4015,5,Athens,OH,Ohio,1985,2021,0
+1326,4080,16,Columbus,OH,Ohio St,1985,2021,0
+1328,4247,12,Norman,OK,Oklahoma,1985,2021,0
+1329,4335,10,Stillwater,OK,Oklahoma St,1985,2021,0
+1330,4244,10,Norfolk,VA,Old Dominion,1985,2021,0
+1331,4351,9,Tulsa,OK,Oral Roberts,1985,2021,0
+1332,4112,17,Eugene,OR,Oregon,1985,2021,0
+1333,4086,12,Corvallis,OR,Oregon St,1985,2021,0
+1334,4336,13,Stockton,CA,Pacific,1985,2021,0
+1335,4266,7,Philadelphia,PA,Penn,1985,2020,0
+1336,4355,3,University Park,PA,Penn St,1985,2021,0
+1337,4210,9,Malibu,CA,Pepperdine,1985,2021,0
+1338,4270,11,Pittsburgh,PA,Pittsburgh,1985,2021,0
+1339,4274,6,Portland,OR,Portland,1985,2021,0
+1340,4274,9,Portland,OR,Portland St,1999,2021,0
+1341,4276,10,Prairie View,TX,Prairie View,1985,2021,0
+1342,4076,5,Clinton,SC,Presbyterian,2008,2021,0
+1343,4280,6,Princeton,NJ,Princeton,1985,2020,0
+1344,4281,13,Providence,RI,Providence,1985,2021,0
+1345,4365,5,West Lafayette,IN,Purdue,1985,2021,0
+1346,4143,5,Hamden,CT,Quinnipiac,1999,2021,0
+1347,4286,9,Radford,VA,Radford,1985,2021,0
+1348,4469,12,South Kingstown,RI,Rhode Island,1985,2021,0
+1349,4157,6,Houston,TX,Rice,1985,2021,0
+1350,4292,3,Richmond,VA,Richmond,1985,2021,0
+1351,4464,1,Lawrence Township,NJ,Rider,1985,2021,12
+1352,4468,2,Moon,PA,Robert Morris,1985,2021,0
+1353,4269,17,Piscataway,NJ,Rutgers,1985,2021,0
+1354,4256,5,Orangeburg,SC,S Carolina St,1985,2021,0
+1355,4046,14,Brookings,SD,S Dakota St,2006,2021,0
+1356,4055,11,Carbondale,IL,S Illinois,1985,2021,0
+1357,4116,8,Fairfield,CT,Sacred Heart,2000,2021,0
+1358,4160,8,Huntsville,TX,Sam Houston St,1987,2021,0
+1359,4458,4,Homewood,AL,Samford,1985,2021,0
+1360,4303,9,San Diego,CA,San Diego,1985,2021,0
+1361,4303,1,San Diego,CA,San Diego St,1985,2021,1
+1362,4304,12,San Francisco,CA,San Francisco,1986,2021,0
+1363,4305,10,San Jose,CA,San Jose St,1985,2021,0
+1364,4459,3,Isla Vista,CA,UC Santa Barbara,1985,2021,0
+1365,4311,5,Santa Clara,CA,Santa Clara,1985,2021,0
+1367,4323,6,Spartanburg,SC,SC Upstate,2008,2021,0
+1368,4145,3,Hammond,LA,SE Louisiana,1985,2021,0
+1369,4054,4,Cape Girardeau,MO,SE Missouri St,1992,2021,0
+1370,4313,5,Seattle,WA,Seattle,2009,2021,0
+1371,4241,4,Newark,NJ,Seton Hall,1985,2021,0
+1372,4231,13,Nacogdoches,TX,SF Austin,1987,2021,0
+1373,4003,14,Albany,NY,Siena,1985,2021,0
+1374,4088,2,Dallas,TX,SMU,1985,2021,0
+1375,4218,5,Mobile,AL,South Alabama,1985,2021,0
+1376,4079,12,Columbia,SC,South Carolina,1985,2021,0
+1377,4359,10,Vermillion,SD,South Dakota,2009,2021,0
+1378,4342,7,Tampa,FL,South Florida,1985,2021,0
+1379,4150,5,Hattiesburg,MS,Southern Miss,1985,2021,0
+1380,4024,9,Baton Rouge,LA,Southern Univ,1985,2021,0
+1381,4057,5,Cedar City,UT,Southern Utah,1989,2021,0
+1382,4465,8,Olean,NY,St Bonaventure,1985,2021,0
+1383,4047,9,Brooklyn,NY,St Francis NY,1985,2021,0
+1384,4199,2,Loretto,PA,St Francis PA,1985,2021,2
+1385,4239,6,New York,NY,St John's,1985,2021,0
+1386,4266,5,Philadelphia,PA,St Joseph's PA,1985,2021,0
+1387,4329,3,St. Louis,MO,St Louis,1985,2021,0
+1388,4222,13,Moraga,CA,St Mary's CA,1985,2021,0
+1389,4169,3,Jersey City,NJ,St Peter's,1985,2021,0
+1390,4331,4,Stanford,CA,Stanford,1985,2021,0
+1391,4094,7,DeLand,FL,Stetson,1985,2021,0
+1392,4337,5,Stony Brook,NY,Stony Brook,2000,2021,0
+1393,4340,11,Syracuse,NY,Syracuse,1985,2021,0
+1394,4085,6,Corpus Christi,TX,TAM C. Christi,2003,2021,0
+1395,4125,13,Fort Worth,TX,TCU,1985,2021,0
+1396,4266,8,Philadelphia,PA,Temple,1985,2021,0
+1397,4180,11,Knoxville,TN,Tennessee,1985,2021,0
+1398,4233,4,Nashville,TN,Tennessee St,1985,2021,0
+1399,4083,4,Cookeville,TN,Tennessee Tech,1985,2021,0
+1400,4020,11,Austin,TX,Texas,1985,2021,0
+1401,4078,6,College Station,TX,Texas A&M,1985,2021,0
+1402,4309,13,San Marcos,TX,Texas St,1985,2021,0
+1403,4205,13,Lubbock,TX,Texas Tech,1985,2021,0
+1404,4212,6,Martin,TN,TN Martin,1993,2021,0
+1405,4346,6,Toledo,OH,Toledo,1985,2021,0
+1406,4348,5,Towson,MD,Towson,1985,2021,0
+1407,4349,4,Troy,AL,Troy,1994,2021,0
+1408,4237,7,New Orleans,LA,Tulane,1985,2021,0
+1409,4351,3,Tulsa,OK,Tulsa,1985,2021,0
+1410,4106,3,Edinburg,TX,UTRGV,1985,2021,1
+1411,4157,1,Houston,TX,TX Southern,1985,2021,7
+1412,4030,9,Birmingham,AL,UAB,1985,2021,0
+1413,4090,6,Davis,CA,UC Davis,2005,2021,0
+1414,4163,9,Irvine,CA,UC Irvine,1985,2021,0
+1415,4294,6,Riverside,CA,UC Riverside,2002,2021,0
+1416,4258,10,Orlando,FL,UCF,1985,2021,0
+1417,4201,13,Los Angeles,CA,UCLA,1985,2021,0
+1418,4181,9,Lafayette,LA,Louisiana,1985,2021,0
+1419,4219,5,Monroe,LA,ULM,1985,2021,0
+1420,4022,7,Baltimore,MD,UMBC,1987,2021,0
+1421,4013,8,Asheville,NC,UNC Asheville,1987,2021,0
+1422,4136,12,Greensboro,NC,UNC Greensboro,1992,2021,0
+1423,4370,5,Wilmington,NC,UNC Wilmington,1985,2021,0
+1424,4188,7,Las Vegas,NV,UNLV,1985,2021,0
+1425,4201,2,Los Angeles,CA,USC,1985,2021,0
+1426,4012,6,Arlington,TX,UT Arlington,1985,2021,0
+1427,4302,7,San Antonio,TX,UT San Antonio,1985,2021,0
+1428,4301,13,Salt Lake City,UT,Utah,1985,2021,0
+1429,4197,13,Logan,UT,Utah St,1985,2021,0
+1430,4257,7,Orem,UT,Utah Valley,2005,2021,0
+1431,4108,4,El Paso,TX,UTEP,1985,2021,0
+1433,4292,14,Richmond,VA,VCU,1985,2021,0
+1434,4357,2,Valparaiso,IN,Valparaiso,1985,2021,3
+1435,4233,11,Nashville,TN,Vanderbilt,1985,2021,0
+1436,4051,3,Burlington,VT,Vermont,1985,2021,0
+1437,4467,8,Bryn Mawr,PA,Villanova,1985,2021,0
+1438,4067,14,Charlottesville,VA,Virginia,1985,2021,0
+1439,4031,6,Blacksburg,VA,Virginia Tech,1985,2021,0
+1440,4194,2,Lexington,VA,VMI,1985,2021,0
+1441,4087,8,Cullowhee,NC,W Carolina,1985,2021,0
+1442,4207,10,Macomb,IL,W Illinois,1985,2021,0
+1443,4041,2,Bowling Green,KY,WKU,1985,2021,0
+1444,4173,8,Kalamazoo,MI,W Michigan,1985,2021,0
+1447,4333,4,Staten Island,NY,Wagner,1985,2021,0
+1448,4371,5,Winston-Salem,NC,Wake Forest,1985,2021,0
+1449,4313,7,Seattle,WA,Washington,1985,2021,0
+1450,4284,5,Pullman,WA,Washington St,1985,2021,0
+1451,4253,5,Ogden,UT,Weber St,1985,2021,0
+1452,4224,2,Morgantown,WV,West Virginia,1985,2021,0
+1453,4135,8,Green Bay,WI,WI Green Bay,1985,2021,0
+1454,4215,5,Milwaukee,WI,WI Milwaukee,1991,2021,0
+1455,4368,2,Wichita,KS,Wichita St,1985,2021,0
+1456,4369,2,Williamsburg,VA,William & Mary,1985,2021,1
+1457,4297,10,Rock Hill,SC,Winthrop,1987,2021,0
+1458,4209,15,Madison,WI,Wisconsin,1985,2021,0
+1459,4323,5,Spartanburg,SC,Wofford,1996,2021,0
+1460,4466,12,Fairborn,OH,Wright St,1988,2021,0
+1461,4186,13,Laramie,WY,Wyoming,1985,2021,0
+1462,4072,5,Cincinnati,OH,Xavier,1985,2021,0
+1463,4236,8,New Haven,CT,Yale,1985,2020,0
+1464,4373,4,Youngstown,OH,Youngstown St,1985,2021,0
+1465,4294,11,Riverside,CA,Cal Baptist,2019,2021,0
+1466,4444,4,Florence,AL,North Alabama,2019,2021,0
+1467,4462,2,North Andover,MA,Merrimack,2020,2021,2
+1600,4600,16,Monroe,LA,Louisiana Monroe,2020,2021,0
